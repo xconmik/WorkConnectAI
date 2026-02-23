@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Brain, Shield, Fingerprint, Building2, User, UserCog, Crown } from "lucide-react";
+import { Brain, Shield, Fingerprint, Building2, User } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
@@ -18,9 +18,6 @@ export function LoginPage() {
     
     // Route based on selected role
     switch(selectedRole) {
-      case "admin":
-        navigate("/admin");
-        break;
       case "employer":
         navigate("/employer");
         break;
@@ -116,32 +113,16 @@ export function LoginPage() {
                       <span className="font-medium text-slate-900">Employer</span>
                     </div>
                   </label>
-
-                  <label className={`flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
-                    selectedRole === "admin" 
-                      ? "border-blue-600 bg-blue-50" 
-                      : "border-slate-200 bg-white hover:border-slate-300"
-                  }`}>
-                    <RadioGroupItem value="admin" id="admin" />
-                    <div className="flex items-center gap-2 flex-1">
-                      <UserCog className="w-5 h-5 text-slate-600" />
-                      <span className="font-medium text-slate-900">Admin</span>
-                    </div>
-                  </label>
-
-                  <label className={`flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
-                    selectedRole === "superadmin" 
-                      ? "border-purple-600 bg-purple-50" 
-                      : "border-slate-200 bg-white hover:border-slate-300"
-                  }`}>
-                    <RadioGroupItem value="superadmin" id="superadmin" />
-                    <div className="flex items-center gap-2 flex-1">
-                      <Crown className="w-5 h-5 text-purple-600" />
-                      <span className="font-medium text-slate-900">Super Admin</span>
-                    </div>
-                  </label>
                 </div>
               </RadioGroup>
+              <Button
+                type="button"
+                variant="link"
+                className="px-0 mt-2 text-blue-600 hover:text-blue-700"
+                onClick={() => navigate("/admin/login")}
+              >
+                Admin / Super Admin Login
+              </Button>
             </div>
 
             {/* Email */}

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { LandingPage } from "./pages/landing-page";
 import { LoginPage } from "./pages/login-page";
+import { AdminLoginPage } from "./pages/admin-login-page";
 import { AdminDashboard } from "./pages/admin/dashboard";
 import { PredictiveInsights } from "./pages/admin/predictive-insights";
 import { WorkforceAnalytics } from "./pages/admin/workforce-analytics";
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     Component: LoginPage,
+  },
+  {
+    path: "/admin/login",
+    Component: AdminLoginPage,
   },
   {
     path: "/admin",
