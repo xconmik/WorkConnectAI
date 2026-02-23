@@ -1,4 +1,4 @@
-import { sendJson } from "../_lib/response";
+import { sendJson } from "../_lib/response.js";
 
 export default function handler(req: any, res: any) {
   if (req.method !== "GET") {

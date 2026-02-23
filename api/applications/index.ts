@@ -1,5 +1,5 @@
-import { createApplication, getStore } from "../_lib/store";
-import { parseBody, sendJson } from "../_lib/response";
+import { createApplication, getStore } from "../_lib/store.js";
+import { parseBody, sendJson } from "../_lib/response.js";
 
 export default async function handler(req: any, res: any) {
   if (req.method === "GET") {

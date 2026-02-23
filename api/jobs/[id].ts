@@ -1,5 +1,5 @@
-import { getStore } from "../_lib/store";
-import { sendJson } from "../_lib/response";
+import { getStore } from "../_lib/store.js";
+import { sendJson } from "../_lib/response.js";
 
 export default function handler(req: any, res: any) {
   if (req.method !== "GET") {

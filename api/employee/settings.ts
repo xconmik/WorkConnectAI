@@ -1,5 +1,5 @@
-import { parseBody, sendJson } from "../_lib/response";
-import { getEmployeeStore } from "../_lib/employee-store";
+import { parseBody, sendJson } from "../_lib/response.js";
+import { getEmployeeStore } from "../_lib/employee-store.js";
 
 export default async function handler(req: any, res: any) {
   const store = getEmployeeStore();

@@ -1,5 +1,5 @@
-import { getStore } from "../../_lib/store";
-import { parseBody, sendJson } from "../../_lib/response";
+import { getStore } from "../../_lib/store.js";
+import { parseBody, sendJson } from "../../_lib/response.js";
 
 const validStatuses = ["New", "Screening", "Interview", "Final Review", "Hired", "Rejected"];
 

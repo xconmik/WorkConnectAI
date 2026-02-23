@@ -1,5 +1,5 @@
-import { sendJson } from "../_lib/response";
-import { getEmployerStore } from "../_lib/employer-store";
+import { sendJson } from "../_lib/response.js";
+import { getEmployerStore } from "../_lib/employer-store.js";
 
 export default function handler(req: any, res: any) {
   const store = getEmployerStore();
